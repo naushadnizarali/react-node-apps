@@ -20,7 +20,10 @@
           "apps/angular-client/src/favicon.ico",
           "apps/angular-client/src/assets"
         ],
-        "styles": ["apps/angular-client/src/styles.scss"],
+        "styles": [
+          "apps/angular-client/src/styles.scss",
+          "node_modules/bootstrap/dist/css/bootstrap.css"
+        ],
         "scripts": []
       },
       "configurations": {
