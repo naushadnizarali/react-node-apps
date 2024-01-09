@@ -25,7 +25,8 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "react-client:build",
-        "proxyConfig": "apps/react-client/proxy.conf.json"
+        "proxyConfig": "apps/react-client/proxy.conf.json",
+        "port": 4200
       },
       "configurations": {
         "development": {
