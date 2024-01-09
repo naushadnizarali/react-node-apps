@@ -1,0 +1,30 @@
+{
+  "name": "react-client-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/react-client-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/react-client-e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "react-client:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "react-client:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "react-client:serve-static"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    }
+  },
+  "implicitDependencies": ["react-client"],
+  "tags": []
+}
